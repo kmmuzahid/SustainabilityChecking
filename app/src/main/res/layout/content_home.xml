@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="grenify.airsustainabilitychecking.Home"
+    tools:showIn="@layout/app_bar_home"
+
+    >
+
+    <TabHost
+        android:nestedScrollingEnabled="true"
+        android:id="@+id/tab_host"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#aea2ff">
+
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridLayout
+                    android:scrollbars="vertical"
+                    android:nestedScrollingEnabled="true"
+                    android:isScrollContainer="true"
+                    android:id="@+id/tab_one_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                          <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingTop="10dp"
+                        android:text="SustainAbility Report For Current Location:"
+                        />
+
+                    <ListView
+                        android:isScrollContainer="false"
+                        android:background="#b69494"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_listView_header"
+                        > </ListView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="2dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:paddingBottom="5dp"
+                        android:background="@color/colorPrimaryDark"
+                        >
+                    <ListView
+                        android:background="#ffffff"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/home_listView_data"
+                        > </ListView>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/test_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+               <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:rowCount="1"
+                        >
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingTop="10dp"
+                        android:text="Alert Type:"
+                        />
+                        <TextView
+                            android:paddingLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="15dp"
+                            android:textColor="@color/colorAccent"
+                            android:paddingTop="10dp"
+                            android:text="Medium"
+                            />
+                  </GridLayout>
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:paddingTop="10dp"
+                        android:text="Suggestion:"
+                        />
+                    <TextView
+                        android:paddingLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingTop="10dp"
+                        android:text="
+                        Please Collect Some warm cloth and Medicine or move yourself to safe place.visit below map to finding out.
+                        "
+                        />
+                </GridLayout>
+                <GridLayout
+                    android:id="@+id/tab_two_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:orientation="vertical">
+
+                </GridLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:columnCount="1"
+    android:orientation="vertical"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
+    android:background="#4a699f">
+
+    <GridLayout
+        android:layout_row="0"
+        android:id="@+id/nav_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/side_nav_bar"
+        android:columnCount="1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:background="@drawable/temperature"
+            android:paddingTop="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="support@grenify.com" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:background="#ffffff"
+        android:layout_row="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:columnCount="1"
+        android:id="@+id/nav_disease_grid_layout"
+        >
+        <GridLayout
+            android:paddingTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:columnCount="3"
+            android:rowCount="1"
+            >
+            <Button
+                android:layout_width="50dp"
+                android:id="@+id/nav_disease_button_back"
+                android:textAllCaps="false"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:textColor="#000000"
+                android:background="@drawable/backbutton"
+                />
+            <SearchView
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_column="1"
+                android:hapticFeedbackEnabled="false"
+                android:queryBackground="@color/colorAccent"
+                android:queryHint="Select Disease"
+                android:id="@+id/nav_disease_search"
+                ></SearchView>
+
+            <Button
+                android:layout_column="2"
+                android:layout_gravity="right"
+                android:layout_width="80dp"
+                android:id="@+id/nav_disease_button_add_disease"
+                android:textAllCaps="false"
+                android:gravity="left"
+                android:textColor="#000000"
+                android:background="@drawable/add"
+                />
+
+        </GridLayout>
+        <android.support.v7.widget.ListViewCompat
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:background="#000000"
+            android:id="@+id/nav_disease_listView"
+            android:layout_width="match_parent"
+            android:foregroundGravity="center_horizontal"
+            android:layout_height="match_parent"
+            android:smoothScrollbar="true"
+            ></android.support.v7.widget.ListViewCompat>
+    </GridLayout>
+
+</GridLayout>

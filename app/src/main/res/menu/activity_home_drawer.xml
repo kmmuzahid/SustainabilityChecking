@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_group_default"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/report"
+            android:title="Stability Report" />
+    </group>
+    <item android:title="Management">
+        <menu>
+            <item
+                android:id="@+id/nav_tools"
+                android:icon="@drawable/disease"
+                android:title="Disease" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_item_communication"
+        android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/share"
+                android:title="Facebook" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+
+</menu>
